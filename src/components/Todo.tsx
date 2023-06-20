@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-autofocus */
 import React, {
-  ChangeEvent, FormEvent, useState, useEffect,
+  ChangeEvent, FormEvent, KeyboardEvent, useState, useEffect,
 } from 'react';
 import { Todo as TypeTodo } from '../types/Todo';
 
@@ -32,7 +32,8 @@ export const Todo: React.FC<TodoProps> = ({
   const handleTitleEdit = (
     event:
     FormEvent<HTMLFormElement>
-    | ChangeEvent<HTMLInputElement>,
+    | ChangeEvent<HTMLInputElement>
+    | KeyboardEvent<HTMLInputElement>,
   ) => {
     event.preventDefault();
 
